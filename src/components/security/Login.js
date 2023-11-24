@@ -1,42 +1,12 @@
 import React from 'react';
 import {Avatar, Button, Card, Container, Grid, Icon, Link, TextField, Typography} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
-const useStyles = makeStyles({
-    container: {
-        marginTop: 40
-    },
-    card: {
-        padding: 35,
+import useStyles from "../../theme/useStyles";
 
-    },
-
-    avatar: {
-        backgroundColor: "darkblue",
-        width: 60,
-        height: 60,
-        fontSize: 30
-
-    },
-    icon: {
-        fontSize: 30,
-        color: "white"
-    },
-    form: {
-        marginTop: 20,
-        marginBottom: 20
-    },
-    gridmb: {
-        marginBottom: 20,
-        marginTop: 20
-    }
-
-});
 const Login = () => {
     const classes = useStyles();
     return (
         <Container className={classes.container}>
             <Grid container justifyContent="center">
-
                 <Grid item lg={5} md={6}>
                     <Card align="center" className={classes.card}>
                         <Avatar className={classes.avatar}>
@@ -46,7 +16,7 @@ const Login = () => {
                             Login
                         </Typography>
 
-                        <form>
+                        <form className={classes.form}>
                             <Grid container spacing={2} className={classes.gridmb}>
                                 <Grid item xs={12}>
                                     <TextField
